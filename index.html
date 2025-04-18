@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #counter {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #reset {
+      background-color: red;
+      color: white;
+    }
+    #increment {
+      background-color: green;
+      color: white;
+    }
+    #decrement {
+      background-color: orange;
+      color: white;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Counter Program</h1>
+  <h1 id="counter">0</h1>
+  <button id="decrement" onclick="updateCounter(-1)">Decrement - 1</button>
+  <button id="decrement" onclick="updateCounter(-2)">Decrement - 2</button>
+  <button id="decrement" onclick="updateCounter(-3)">Decrement - 3</button>
+  
+  <button id="increment" onclick="updateCounter(1)">Increment + 1</button>
+  <button id="increment" onclick="updateCounter(2)">Increment + 2</button>
+  <button id="increment" onclick="updateCounter(3)">Increment + 3</button>
+  <button id="reset" onclick="resetCounter()">Reset</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
