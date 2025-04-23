@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter Program</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    #counter {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    button {
-      font-size: 24px;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-    }
-    #reset {
-      background-color: red;
-      color: white;
-    }
-    #increment {
-      background-color: green;
-      color: white;
-    }
-    #decrement {
-      background-color: orange;
-      color: white;
-    }
-    button:hover {
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-  <h1>Counter Program</h1>
-  <h1 id="counter">0</h1>
-  <button id="decrement" onclick="updateCounter(-1)">Decrement - 1</button>
-  <button id="decrement" onclick="updateCounter(-2)">Decrement - 2</button>
-  <button id="decrement" onclick="updateCounter(-3)">Decrement - 3</button>
-  
-  <button id="increment" onclick="updateCounter(1)">Increment + 1</button>
-  <button id="increment" onclick="updateCounter(2)">Increment + 2</button>
-  <button id="increment" onclick="updateCounter(3)">Increment + 3</button>
-  <button id="reset" onclick="resetCounter()">Reset</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-center mt-12 bg-gray-50 min-h-screen">
+    <div id="div" class="inline-block mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-6">
+        Counter Program For Three Weeks with Count Down or Up
+      </h1>
+      <h1 id="counter" class="text-6xl font-bold text-gray-800 mb-5">0</h1>
 
-  <script src="script.js"></script>
-</body>
+      <div class="flex flex-wrap justify-center gap-4 mb-4">
+        <button onclick="updateCounter(-24)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
+          - 1 Day
+        </button>
+        <button onclick="updateCounter(-168)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
+          - 1 Week
+        </button>
+        <button onclick="updateCounter(-336)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
+          - 2 Week
+        </button>
+
+        <button onclick="updateCounter(24)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
+          + 1 Day
+        </button>
+        <button onclick="updateCounter(168)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
+          + 1 Week
+        </button>
+        <button onclick="updateCounter(336)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
+          + 2 Week
+        </button>
+      </div>
+
+      <button onclick="resetCounter()" class="block mx-auto mt-5 bg-red-600 text-white px-6 py-3 text-xl rounded hover:opacity-80">
+        Reset
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
