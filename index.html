@@ -7,37 +7,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-sans text-center mt-12 bg-gray-50 min-h-screen">
-    <div id="div" class="inline-block mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div
+      id="div"
+      class="inline-block mx-auto p-6 bg-white rounded-lg shadow-md"
+    >
       <h1 class="text-2xl font-bold mb-6">
-        Counter Program For Three Weeks with Count Down or Up
+        Counter Program For Real Time Counting
       </h1>
-      <h1 id="counter" class="text-6xl font-bold text-gray-800 mb-5">0</h1>
-
-      <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <button onclick="updateCounter(-24)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
-          - 1 Day
-        </button>
-        <button onclick="updateCounter(-168)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
-          - 1 Week
-        </button>
-        <button onclick="updateCounter(-336)" class="text-white bg-orange-500 hover:opacity-80 px-6 py-3 text-xl rounded">
-          - 2 Week
-        </button>
-
-        <button onclick="updateCounter(24)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
-          + 1 Day
-        </button>
-        <button onclick="updateCounter(168)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
-          + 1 Week
-        </button>
-        <button onclick="updateCounter(336)" class="text-white bg-green-600 hover:opacity-80 px-6 py-3 text-xl rounded">
-          + 2 Week
-        </button>
+      <div class="mb-4">
+        <span id="counter" class="text-4xl font-bold">00:00:00</span>
       </div>
-
-      <button onclick="resetCounter()" class="block mx-auto mt-5 bg-red-600 text-white px-6 py-3 text-xl rounded hover:opacity-80">
-        Reset
-      </button>
+      <div class="mb-4">
+        <button
+          id="counting-up"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Counting Up
+        </button>
+        <button
+          id="counting-down"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Counting Down
+        </button>
+        <button
+          id="pause"
+          class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600"
+        >
+          Pause
+        </button>
+        <button
+          id="reset"
+          class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+        >
+          Reset
+        </button>
     </div>
 
     <script src="script.js"></script>
